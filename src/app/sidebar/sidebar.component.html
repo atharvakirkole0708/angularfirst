@@ -1,0 +1,9 @@
+<div class="sidebar" [class.hidden]="isHidden">
+
+  <ul class="sidebar-menu">
+      <li><a routerLink="/" (click)="toggleSidebar()">🏠 Home</a></li>
+      <li><a routerLink="/about" (click)="toggleSidebar()">ℹ️ About</a></li>
+  </ul>
+</div>
+
+<button class="open-btn" (click)="toggleSidebar()">☰</button>

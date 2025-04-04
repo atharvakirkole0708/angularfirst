@@ -1,0 +1,72 @@
+<div class="charts-container">
+  <!-- Pie Chart -->
+
+  <ngx-charts-bar-vertical
+  [results]="single"
+  [view]="view"
+  [scheme]="colorScheme"
+  [gradient]="gradient"
+  [showXAxis]="true"
+  [showYAxis]="true"
+  [showLegend]="showLegend"
+  [showDataLabel]="showLabels">
+</ngx-charts-bar-vertical>
+
+<!-- Line Chart -->
+<ngx-charts-line-chart
+  [results]="multi"
+  [view]="view"
+  [scheme]="colorScheme"
+  [gradient]="gradient"
+  [xAxis]="true"
+  [yAxis]="true"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [autoScale]="true">
+</ngx-charts-line-chart>
+
+  <div class="chart-placeholder">
+    <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [legend]="showLegend"
+      [labels]="showLabels"
+      [gradient]="gradient">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <!-- Bar Chart -->
+  <div class="chart-placeholder">
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [legend]="showLegend"
+      [gradient]="gradient"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Category"
+      yAxisLabel="Value">
+    </ngx-charts-bar-vertical>
+  </div>
+
+  <!-- Line Chart -->
+  <div class="chart-placeholder">
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [legend]="showLegend"
+      [gradient]="gradient"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Year"
+      yAxisLabel="Sales">
+    </ngx-charts-line-chart>
+  </div>
+</div>

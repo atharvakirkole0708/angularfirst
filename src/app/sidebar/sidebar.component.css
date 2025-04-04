@@ -1,0 +1,84 @@
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hidden state */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+/* Menu list */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.sidebar-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Open button (☰ Menu) - Moves with sidebar */
+.open-btn {
+  position: relative;
+  top: 0px;
+  left: 250px; /* Default position when menu is open */
+  background: #2c3e50;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 3px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Move open button when sidebar is closed */
+.sidebar.hidden ~ .open-btn {
+  left: 20px; /* Moves button back when menu is hidden */
+}
+
+.open-btn:hover {
+  background: #34495e;
+}

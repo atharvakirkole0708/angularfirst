@@ -1,0 +1,39 @@
+.charts-container {
+    display: flex;            /* Display in a row */
+    justify-content: center;  /* Center the charts horizontally */
+    align-items: center;      /* Align vertically */
+    flex-wrap: wrap;          /* Allow wrapping on smaller screens */
+    gap: 30px;                /* Space between charts */
+    margin-top: 50px;         /* Move down */
+  }
+  
+  .chart-placeholder {
+    width: 30%;              /* Fixed width */
+    height: 300px;             /* Fixed height */
+    background-color: #f3f3f3; /* Light gray */
+    display: flex;             /* Center content */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #666;
+    border-radius: 10px;       /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  Hover effect
+  .chart-placeholder:hover {
+    /* transform: translateY(-5px); Slight lift effect */
+  }
+  
+  /* Responsive: Stack charts on smaller screens */
+  @media (max-width: 900px) {
+    .charts-container {
+      flex-direction: column;  /* Stack charts vertically */
+    }
+  
+    .chart-placeholder {
+      width: 80%; /* Take more width on smaller screens */
+    }
+  }
+  
