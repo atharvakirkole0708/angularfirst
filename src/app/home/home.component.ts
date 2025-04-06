@@ -13,7 +13,7 @@ export class HomeComponent {
   single: any[] = [
     { name: 'Category A', value: 30 },
     { name: 'Category B', value: 70 },
-    { name: 'Category C', value: 100 }
+    { name: 'Category C', value: 13000 }
   ];
 
   multi: any[] = [
